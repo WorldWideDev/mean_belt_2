@@ -1,0 +1,10 @@
+<div id='newQuestion'>
+	<h1>New Question</h1>
+	<p ng-if='QC.err' class='err'>{{QC.err}}</p>
+	Question: <br><textarea ng-model='QC.new_question.content'></textarea><br>
+	Correct Answer: <br><input type='text' ng-model='QC.new_question.correct'><br>
+	Fake Answer 1: <br><input type='text' ng-model='QC.new_question.fake_1'><br>
+	Fake Answer 2: <br><input type='text' ng-model='QC.new_question.fake_2'><br>
+	<a href="#/home">CANEL</a>
+	<button ng-click='QC.create()'>Add Quesiton</button>
+</div>

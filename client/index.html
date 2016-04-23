@@ -1,0 +1,22 @@
+<html ng-app='myApp'>
+<head>
+	<script type="text/javascript" src='/angular/angular.js'></script>
+	<script type="text/javascript" src='/angular-route/angular-route.js'></script>
+	<script type="text/javascript" src='/static/js/config.js'></script>
+	<script type="text/javascript" src='/static/js/factories/user.js'></script>
+	<script type="text/javascript" src='/static/js/factories/question.js'></script>
+	<script type="text/javascript" src='/static/js/factories/test.js'></script>
+	<script type="text/javascript" src='/static/js/controllers/home.js'></script>
+	<script type="text/javascript" src='/static/js/controllers/question.js'></script>
+	<script type="text/javascript" src='/static/js/controllers/play.js'></script>
+	<link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	<title>SUP</title>
+</head>
+<body>
+	<div class='container'>
+		<a href="#/home">HOME</a> | <a href="#/new_question">Add a Question</a>
+		<div ng-view=''></div>
+	</div>
+</body>
+</html>

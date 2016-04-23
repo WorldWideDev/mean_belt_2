@@ -1,0 +1,9 @@
+<h1>HI {{PC.curr_user.name}}</h1>
+<h2>Choose an answer for each of the questions and submit the test once ur done.</h2>
+<div ng-repeat='q in PC.questions'>
+	<h3>{{q.content}}</h3>
+	<input type='radio' ng-model='PC.new_test.correct[q._id]' name='{{q._id}}' value='q.correct' required> {{q.correct}}<br>
+	<input type='radio' ng-model='PC.new_test.fake_1[q._id]' name='{{q._id}}' value='q.fake_1'  required> {{q.fake_1}}<br>
+	<input type='radio' ng-model='PC.new_test.fake_2[q._id]' name='{{q._id}}' value='q.fake_2'  required> {{q.fake_2}}<br>
+</div>
+<button ng-click='PC.create()'>SUBMIT</button>

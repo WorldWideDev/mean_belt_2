@@ -1,0 +1,25 @@
+<div id='login'>
+	<a href="" ng-click='HC.logout()'>LOGOUT</a>
+	<p ng-if='HC.err' class='err'>{{HC.err}}</p>
+	<p ng-if='HC.success' class='success'>{{HC.success}}</p>
+	<h3>Click link to play</h3>
+	<a href="#/lets_play">PLAY</a><br>
+	<input type='text' ng-model='filter' placeholder='serch'>
+	<table class='table table-bordered'>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Score</th>
+				<th>Percentage</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat='t in HC.tests | filter:filter'>
+				<td>{{t._user.name}}</td>
+				<td>{{t.correct}}/{{t.questions}}</td>
+				<td>{{t.percentage}}</td>
+			</tr>
+		</tbody>
+
+	</table>
+</div>

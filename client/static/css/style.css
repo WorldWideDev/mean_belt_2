@@ -1,0 +1,11 @@
+*{
+	font-family: monospace;
+}
+.err{
+	font-weight: bold;
+	color: #FD6464;
+}
+.success{
+	font-weight: bold;
+	color: #83DA97;
+}
